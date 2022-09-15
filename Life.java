@@ -30,6 +30,11 @@ public class Life extends JFrame{
 	String pattern;
 	
 	public Life() throws IOException {
+		try {
+			UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
 		iterationsCompleted = 0;
 		gridSize = 45;
 		iterations = 0;
